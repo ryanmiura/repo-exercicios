@@ -6,4 +6,5 @@ void main(){
  scanf("%d",&ano);
  idade = 2022-ano;
  printf("Provavelmente vc tem %d anos",idade);
- r
+ return 0;
+}
