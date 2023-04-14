@@ -7,13 +7,31 @@
 #include <stdio.h>
 #include <math.h>
 
-int arredondaValor(float num){
-    return round(num);
+float calculaDesconto(float num){
+    return num*0.5;
+}
+float calculaJuros(float num){
+    return num*1.5;
 }
 int main(){
+    int opc;
     float number;
+    do{
     printf("Digite um numero decimal\n");
     scanf("%f",&number);
-    printf("O arredondamento desse numero eh : %d",arredondaValor(number));
+    printf("Voce quer calular desconto ou juros?\n");
+    printf(" 1 - Desconto");
+    printf(" 2 - Juros ");
+    printf(" 0 - Sair ");
+    scanf("%d",&opc);
+    }while(opc>2||opc<0);
+    if(opc==1){
+        printf("Valor com desconto = %.2f",calculaDesconto(number));
+    }else if(opc==2){
+        printf("Valor com juros = %.2f",calculaJuros(number));
+    }else{
+        return 0;
+    }
+    
     return 0;
 }
